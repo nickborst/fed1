@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF ;
+    margin: 0 3em 0 3em;
+}
+link {
+    text-decoration: underline;
+}
+
+form label{
+    float: none;
+    clear:both;
+    display:block;
+}
+
+span{
+    float:none;
+    clear:both;
+    display:block;
+}

@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Aanmelden</title>
+  <meta name="CMD Amsterdam" content="Formulierpagina">
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+ </head>
+ <body>
+
+
+    <!-- Bij de <form>'s" zijn nog geen action="" toegevoegd, omdat de data uit de forms nog nergens(database) heen gestuurd hoeft te worden! -->
+    <!-- Eerst had ik hier alles in 1 "form" gedaan, maar zodra ik het dan in de browser bekeek werkte de notificaties niet! -->
+    <!-- "The legend element represents a caption for the rest of the contents of the legend element's parent fieldset element, if any." Aldus: html5doctor-->
+    <!-- id's worden niet doorgestuurd naar de server/database maar name's wel(bij inputs) id's zijn alleen voor styling met css en evt. js-->
+    <!-- W3C geeft errors aan alle input velden wanneer deze geeft id hebben (id's zijn al wel toegevoegd bij 'contactgegevens'). -->
+
+     <h1>Aanmelden</h1>
+
+     <p>Bent u geïnteresseerd in samenwerken met CMD Amsterdam? Dat kan! Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook lopen de studenten stage, in het tweede en afstudeerjaar.</p>
+
+     <p>CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad
+Amsterdam.</p>
+
+    <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u contact [<a href="http://www.hva.nl/onderwijs/opleidingen/content/dmci/communication-and-multimedia-design/meer-informatie/contact/contact-en-locatie.html">link: contact</a>] met ons op.</p>
+
+
+
+   <!-- Hier beginnen de invulvelden van: contactgegevens -->
+    <form>
+      <fieldset id="contactgegevens">
+        <legend>Contactgegevens</legend>
+       <label for="naam">Naam:</label>
+        <input type="text" name="naam"  placeholder="Voornaam Achternaam" required>
+       <label for="bedrijf">Bedrijf:</label>
+        <input type="text" name="bedrijf" id="bedrijf" required>
+       <label for="adres">Adres:</label>
+        <input type="text" name="adres" id="adres" required>
+       <label for="postcode">Postcode:</label>
+        <input type="text" name="postcode" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" id="postcode" placeholder="1234 AA" required>
+       <label for="plaats">Plaats:</label>
+        <input type="text" name="plaats" id="plaats" required>
+       <label for="telefoon">Telefoon:</label>
+        <input type="tel" name="telefoon" id="telefoon" required>
+       <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+      </fieldset>
+
+        <label for="aanmeldenProject">Ik wil mij aanmelden:</label>
+        <input type="radio" id="aanmeldenProject" name="aanmelden" value="project" checked> Voor een project
+        <br>
+        <input type="radio" id="aanmeldenStage" name="aanmelden" value="stagebedrijf"> Als stagebedrijf
+
+
+   <!-- Hier beginnen de invulvelden van: project -->
+
+
+      <fieldset>
+            <legend id="project">Project</legend>
+             <label for="titel">Titel:</label>
+            <input type="text" name="titel" id="titel" required>
+             <label for="opdrachtomschrijving">Opdrachtomschrijving:</label>
+            <input type="text" name="opdrachtomschrijving" id="opdrachtomschrijving" required>
+             <label for="doelgroepomschrijving">Doelgroepomschrijving:</label>
+            <input type="text" name="doelgroepomschrijving" id="doelgroepomschrijving" required>
+             <label for="doelstelling">Doelstelling/intentie van het project:</label>
+            <input type="text" name="doelstelling" id="doelstelling" required>
+             <label for="looptijd">Looptijd (in uren):</label>
+            <input type="number" name="looptijd" id="looptijd" required>
+             <label for="deadline">Deadline:</label>
+            <input type="date" name="deadline" id="deadline" required>
+      </fieldset>
+
+
+      <fieldset>
+            <label for="geschiktheid">Geschikt voor:</label> <br>
+            <span>Eerstejaars studenten</span>
+            <input type="radio" name="geschiktheid" id="geschiktheid" Checked>
+            <span>Tweedejaars studenten</span>
+            <input type="radio" name="geschiktheid">
+            <span>Derdejaars studenten</span>
+            <input type="radio" name="geschiktheid">
+            <span>Afstudeer studenten</span>
+            <input type="radio" name="geschiktheid">
+            <span>Onbekend</span>
+            <input type="radio" name="geschiktheid">
+      </fieldset>
+
+
+
+      <fieldset>
+            <label for="opmerking">Opmerking:</label>
+            <input type="text" name="opmerking" id="opmerking">
+      </fieldset>
+
+
+
+
+   <!-- Hier beginnen de invulvelden van: stage -->
+      <fieldset id="stage">
+            <legend>Stage</legend>
+            <label for="tweedejaars">Geschikt voor:</label> <br>
+            <span>Tweedejaars studenten</span>
+            <input type="checkbox" name="geschiktheid" value="jaar" id="tweedejaars" checked>
+            <span>Afstudeer studenten</span>
+            <input type="checkbox" name="geschiktheid" value="jaar" checked>
+            <span>Onbekend</span>
+            <input type="checkbox" name="geschiktheid" value="jaar" checked>
+      </fieldset>
+
+
+
+      <fieldset>
+            <label for="tienWeken">Hoe Lang is de stage:</label> <br>
+            <input type="radio" name="aantalWeken" value="tienweken" id="tienWeken" checked> 10 weken
+            <input type="radio" name="aantalWeken" value="twintigweken"> 20 weken
+      </fieldset>
+
+
+
+      <fieldset>
+            <label for="werkzaamheden">Beschrijving werkzaamheden:</label>
+            <input type="text" name="werkzaamheden" id="werkzaamheden" required>
+      </fieldset>
+
+
+      <fieldset>
+            <label>Beschrijving stagebedrijf:</label> <br>
+
+             <label for="bedrijfsnaam">Bedrijfsnaam:</label>
+            <input type="text" name="bedrijfsnaam" id="bedrijfsnaam" required>
+             <label for="stageAdres">Adres:</label>
+            <input type="text" name="adres" id="stageAdres" required>
+             <label for="postcodeStage">Postcode:</label>
+            <input type="text" name="postcode" value="" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" id="postcodeStage" required>
+             <label for="plaatsStage">Plaats:</label>
+            <input type="text" name="plaats" id="plaatsStage" required>
+             <label for="sector">Sector:</label>
+            <input type="text" name="sector" id="sector" required>
+             <label for="coreBusiness">Core Business:</label>
+            <input type="text" name="coreBusiness" id="coreBusiness" required>
+      </fieldset>
+
+
+      <fieldset>
+            <label for="opmerking">Opmerking:</label>
+            <input type="text" name="opmerking">
+      </fieldset>
+
+      <button type="submit">Verzenden</button>
+
+      </form>
+
+
+    <footer>Door: Communication &amp; Multimedia Design te Hogeschool van Amsterdam</footer>
+
+
+ </body>
+</html>
